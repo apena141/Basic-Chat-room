@@ -20,11 +20,10 @@ This was a school assignment that covered the topics of Multi-threading and Sock
 The port that my server listens on is PORT 9090
 
 ------------------------------------ Commands ----------------------------------------
-"/list" - gives a list of all connected users in the chat
-"logout" or "LOGOUT" - logs the user out and broadcasts a message to all users in chat
 
-I beleive I have implemented all the functionality that the assignment requires
-If you can please let me know of any suggestions or errors so I can review over the topics.
+"/list" - gives a list of all connected users in the chat
+
+"logout" or "LOGOUT" - logs the user out and broadcasts a message to all users in chat
 
 ------------------------------ Screenshots --------------------------------------------
 #1 - a screenshot of a user joining the chat and broadcast the message to all clients
