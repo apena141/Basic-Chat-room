@@ -14,7 +14,8 @@ public class server {
 	private static int PORT = 9090;
 	private static ArrayList<ClientHandler> clients = new ArrayList<>();
 	public static ArrayList<String> names = new ArrayList<>();
-	private static ExecutorService pool = Executors.newFixedThreadPool(5);
+	private static int maxClients = 5;
+	private static ExecutorService pool = Executors.newFixedThreadPool(maxClients);
 	private static int idNum = 0;
 	private static Lock lock;
 	
@@ -32,14 +33,22 @@ public class server {
 			clients.add(clientThread);
 			pool.execute(clientThread);
 		}
+
 	}
 	
-	public static void RemoveClient(int position) {
-			names.remove(position);
-			clients.remove(position);
+	public static void RemoveClient(int position, String name) {
+		int i = 0;
+		for(String s : names) {
+			if(names.get(i) == name) {
+				names.remove(i);
+				break;
+			}
+			i++;
+		}
+		clients.remove(position);
 	}
 	
 	public static void AddName(String name) {
-			names.add(name);
+		names.add(name);
 	}
 }

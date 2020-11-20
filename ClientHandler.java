@@ -51,7 +51,7 @@ public class ClientHandler implements Runnable{
 					// without any errors
 					lock.lock();
 					try {
-						server.RemoveClient(this.id);
+						server.RemoveClient(this.id, this.chatid);
 						SendExitMessageToAll(chatid);
 					}finally {
 						lock.unlock();
@@ -112,7 +112,7 @@ public class ClientHandler implements Runnable{
 		}
 	}
 	
-	private String getID() {
+	public String getID() {
 		output.println("Enter a chat id: ");
 		String chatid = "";
 		try {
