@@ -26,8 +26,12 @@ The port that my server listens on is PORT 9090
 "logout" or "LOGOUT" - logs the user out and broadcasts a message to all users in chat
 
 ------------------------------ Screenshots --------------------------------------------
+
 #1 - a screenshot of a user joining the chat and broadcast the message to all clients
+
 #2 - client attempts to use the same id as another user already in chat
+
 #3 - bob requested /list and was returned a list of all users in the chat
+
 #4 - anthony typed logout and broadcasted the message. bob requested a list again and anthony is no longer in the list
 
