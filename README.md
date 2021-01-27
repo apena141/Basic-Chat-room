@@ -14,7 +14,7 @@ The following **required** functionality is completed:
 * [X] User's **can request a list of usernames connected to server**
 
 ### App Walkthough GIF
-<img src="https://github.com/apena141/Basic-Chat-room/blob/main/demo.gif" width=250>
+<img src="https://github.com/apena141/Basic-Chat-room/blob/main/demo.gif" width=700>
 
 ## Notes
 
