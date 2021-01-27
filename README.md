@@ -13,6 +13,9 @@ The following **required** functionality is completed:
 * [X] Server can **broadcast to all clients about a user entering the chat room**
 * [X] User's **can request a list of usernames connected to server**
 
+### App Walkthough GIF
+<img src="https://github.com/apena141/Basic-Chat-room/blob/main/demo.gif" width=250>
+
 ## Notes
 
 This was a school assignment that covered the topics of Multi-threading and Socket programming.
