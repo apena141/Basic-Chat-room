@@ -6,7 +6,7 @@ import java.net.Socket;
 
 public class Client {
 	
-	private static final String SERVER_IP = "192.168.1.187";
+	private static final String SERVER_IP = "127.0.0.1";
 	private static final int SERVER_PORT = 9090;
 	
 	public static void main(String[] args) throws IOException {
@@ -18,13 +18,12 @@ public class Client {
 		// We get the chatID and send it to the server
 		BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
 		PrintWriter out = new PrintWriter(server.getOutputStream(), true);
-		
-		
-		//String chatid = keyboard.readLine();
-		//out.println(chatid);
+
+		// Initiate and start the client thread
 		Thread clientThread = new Thread(serverConnection);
 		clientThread.start();
 		
+		// Listen to any input 
 		while(true) {
 			System.out.println("> ");
 			String message = keyboard.readLine();
@@ -34,16 +33,9 @@ public class Client {
 				System.out.println("Loging you out...");
 				break;
 			}
-			
-			// TEST DELETE ME
+
 			// send to server
 			out.println(message);
-			// print response
-			//servermsg = input.readLine();
-			//System.out.println(servermsg);
-			/////////////////////
-
-			// HERE WE MAY WANT TO ADD IN THE FUTURE THAT WE NEED TO SEND THIS MESSAGE ACROSS ALL CLIENTS
 		}
 		
 	}
